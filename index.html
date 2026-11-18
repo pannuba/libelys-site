@@ -60,11 +60,11 @@
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%;}
   body {
     margin: 0;
-    background: var(--ink);
-    color: var(--cream);
+    background: var(--cream);
+    color: var(--ink);
     font-family: var(--sans);
     font-size: 1.0625rem;
     line-height: 1.65;
@@ -85,14 +85,14 @@
   .wrap { width: min(1120px, 100% - 2rem); margin-inline: auto; }
 
   /* ---------- Header ---------- */
-  .site-header { background: var(--ink); padding-block: 1.5rem; }
+  .site-header { background: var(--cream); padding-block: 1.5rem; }
   .site-header .wrap {
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   }
   .brand {
     font-family: var(--serif); font-weight: 400; font-size: 1.25rem;
     letter-spacing: .3em; text-transform: uppercase; text-decoration: none;
-    color: var(--gold);
+    color: var(--ink);
   }
   .nav { display: flex; gap: 2rem; flex-wrap: wrap; font-family: var(--serif); font-size: 1.2rem; letter-spacing: .06em; }
   .nav a { text-decoration: none; padding-block: .2rem; border-bottom: 1px solid transparent; }
@@ -103,7 +103,7 @@
     position: relative; overflow: hidden; text-align: center;
     padding-block: clamp(3.5rem, 10vw, 8rem) clamp(4rem, 10vw, 8rem);
     /* un riflesso caldo, come la luce all'interno del boutique */
-    background: radial-gradient(ellipse 60% 70% at 50% 45%, rgba(199,123,59,.22), transparent 70%), var(--ink);
+    background: var(--cream);
   }
   .hero .wrap { position: relative; z-index: 1; }
   .hero h1 {
@@ -111,13 +111,13 @@
     font-family: var(--serif); font-weight: 300; text-transform: uppercase;
     font-size: clamp(2.6rem, 13vw, 8.5rem);
     line-height: 1; letter-spacing: .3em;
-    color: var(--cream);
+    color: var(--ink);
   }
   .hero .city {
     margin: .9rem 0 0; padding-left: .5em;
     font-family: var(--serif); font-weight: 400; text-transform: uppercase;
     font-size: clamp(.95rem, 2.4vw, 1.5rem); letter-spacing: .5em;
-    color: var(--gold);
+    color: var(--espresso);
   }
   .hero .rule { width: 56px; height: 1px; margin: clamp(2rem, 5vw, 3rem) auto; border: 0; background: var(--gold); }
   .hero .lede {
@@ -127,12 +127,12 @@
   }
   .hero .meta {
     margin: 1.75rem 0 0; display: flex; flex-direction: column; gap: .15rem;
-    font-size: .98rem; color: var(--sand);
+    font-size: .98rem; color: var(--ink);
   }
   .btn {
     display: inline-block; margin-top: 2.25rem;
     background: var(--gold); color: var(--ink);
-    padding: .95rem 2.2rem; text-decoration: none; font-weight: 600; letter-spacing: .06em;
+    padding: .15rem .55rem; text-decoration: none; font-size: .75rem; font-weight: 400; letter-spacing: .02em;
     border: 1px solid var(--gold);
   }
   .btn:hover { background: transparent; color: var(--gold); }
@@ -169,23 +169,23 @@
   }
 
   /* Dove siamo */
-  .visit { background: var(--espresso); }
-  .visit h2 { color: var(--gold); }
+  .visit { background: var(--cream); }
+  .visit h2 { color: var(--ink); }
   .visit .cols { display: grid; gap: 2.5rem 5rem; grid-template-columns: 1fr 1fr; }
   .visit address { font-style: normal; margin-bottom: 1.5rem; font-size: 1.15rem; }
   .visit ul { list-style: none; margin: 0 0 2rem; padding: 0; }
   .visit li { margin-bottom: .35rem; }
-  .visit li a { text-decoration-color: var(--gold); }
+  .visit li a { text-decoration-color: var(--ink); }
   .visit a.map {
     display: inline-block; padding: .9rem 1.8rem;
-    border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-weight: 600; letter-spacing: .06em;
+    border: 1px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 600; letter-spacing: .06em;
   }
   .visit a.map:hover { background: var(--gold); color: var(--ink); }
   .hours { width: 100%; border-collapse: collapse; }
   .hours caption { text-align: left; font-family: var(--serif); font-size: 1.7rem; padding-bottom: .75rem; color: var(--cream); }
-  .hours th, .hours td { padding: .65rem 0; border-bottom: 1px solid rgba(201,163,91,.3); text-align: left; font-weight: 400; vertical-align: top; }
+  .hours th, .hours td { padding: .65rem 0; border-bottom: 1px solid rgba(205, 139, 17, 0.4); text-align: left; font-weight: 400; vertical-align: top; }
   .hours td { text-align: right; }
-  .hours tr.today th, .hours tr.today td { color: var(--gold); font-weight: 600; }
+  .hours tr.today th, .hours tr.today td { color: var(--text-on-cream); font-weight: 600; }
 
   /* Footer */
   footer { background: var(--ink); border-top: 1px solid rgba(201,163,91,.3); padding-block: 2rem 3rem; font-size: .9rem; color: var(--sand); }
